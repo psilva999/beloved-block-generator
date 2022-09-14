@@ -24,7 +24,7 @@ header {
     clip-path:$bilhete;
     text-decoration:none;
     background:$main-black;
-    width:2.8rem;
+    width:2.6rem;
     height:3rem;
     display:flex;
     justify-content:center;
@@ -43,8 +43,9 @@ header {
     &:hover {
       img {
         transition:.2s;
-        transform:translateY(-.5rem);
+        transform:translateY(-.3rem);
       }
     }
+
   }
 }

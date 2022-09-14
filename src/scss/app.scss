@@ -30,13 +30,19 @@ body {
     border:.375rem solid $main-black;
   }
 
-  &, main, header {
+  &, main, header, .beloved-block {
     display:grid;
     place-items:center;
   }
 
   main {
     max-width:78rem;
+    gap:2.5rem;
+  }
+
+  section {
+    display:flex;
+    gap:3rem;
   }
 }
 

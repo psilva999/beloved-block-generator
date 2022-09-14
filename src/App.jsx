@@ -2,8 +2,8 @@ import React from 'react'
 import './Css/app.min.css'
 
 import Header from './Components/Header'
-// import Block from './Components/Block'
-// import Generator from './Components/Generator'
+import Block from './Components/Block'
+import Generator from './Components/Generator'
 
 function App() {
 
@@ -12,10 +12,10 @@ function App() {
       <main>
         <Header/>
 
-        {/* <section>
+        <section>
           <Block/>
           <Generator/>
-        </section> */}
+        </section>
       </main>
     </>
 
