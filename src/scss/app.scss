@@ -1,0 +1,39 @@
+@import 'config';
+
+* {
+  margin:0;
+  border:0;
+  box-sizing:border-box;
+  font-family:$main-font;
+}
+
+body {
+  overflow-x:hidden;
+  overflow-y:auto;
+  background:$main-white;
+  scrollbar-width:thin;
+  scrollbar-color:#7c6a6a;
+
+  &::-webkit-scrollbar {
+    width:.43rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background:$white-overtone;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:$main-black;
+    background:$main-black;
+    border-radius:0 0 0 .1rem;
+    border:.375rem solid $main-black;
+  }
+
+  main {
+    max-width:78rem;
+  }
+}
+
+@import 'header';
+@import 'block';
+@import 'generator';
