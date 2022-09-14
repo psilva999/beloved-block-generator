@@ -5,6 +5,7 @@
   border:0;
   box-sizing:border-box;
   font-family:$main-font;
+  color:$main-black;
 }
 
 body {
@@ -27,6 +28,11 @@ body {
     background:$main-black;
     border-radius:0 0 0 .1rem;
     border:.375rem solid $main-black;
+  }
+
+  &, main, header {
+    display:grid;
+    place-items:center;
   }
 
   main {

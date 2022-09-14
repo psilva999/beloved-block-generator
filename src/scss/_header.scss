@@ -1,0 +1,50 @@
+@import 'config';
+
+header {
+  display:grid;
+  gap:.3rem;
+  margin-top:1.5rem;
+
+  h1 {
+    font-weight:300;
+    font-size:2.6rem;
+    background:$dark-white;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+
+  span {
+    font-size:1.4rem;
+    font-weight:200;
+    color:$nevoa;
+  }
+
+  a {
+    -webkit-clip-path:$bilhete;
+    clip-path:$bilhete;
+    text-decoration:none;
+    background:$main-black;
+    width:2.8rem;
+    height:3rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:0;
+    margin-left:50rem;
+
+    img {
+      transition:.2s;
+      margin-top:-.1rem;
+      margin-left:-2;
+      width:3rem;
+    }
+
+    &:hover {
+      img {
+        transition:.2s;
+        transform:translateY(-.5rem);
+      }
+    }
+  }
+}
