@@ -2,17 +2,17 @@
 
 .beloved-block {
   background:$main-white;
-  width:21rem;
-  height:15rem;
+  width:25rem;
+  height:17rem;
   font-size:3rem;
   font-weight:700;
   display:grid;
-  margin-top:7rem;
+  margin-top:5rem;
 
   &:after {
     content:'';
-    width:24rem;
-    height:24rem;
+    width:33rem;
+    height:23rem;
     position:absolute;
     background:$sombra;
     filter:blur(3px);

@@ -42,10 +42,12 @@ body {
 
   section {
     display:flex;
-    gap:3rem;
+    gap:6rem;
   }
 }
 
 @import 'header';
 @import 'block';
+
 @import 'generator';
+@import 'gradient';

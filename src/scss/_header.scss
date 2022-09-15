@@ -31,7 +31,8 @@ header {
     align-items:center;
     position:absolute;
     top:0;
-    margin-left:50rem;
+    margin-left:61rem;
+    animation:show-github .5s linear forwards;
 
     img {
       transition:.2s;
@@ -47,5 +48,15 @@ header {
       }
     }
 
+  }
+}
+
+@keyframes show-github {
+  from {
+    top:-3rem;
+  }
+
+  to {
+    top:0;
   }
 }
