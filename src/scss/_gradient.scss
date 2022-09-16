@@ -8,15 +8,15 @@
     }
   }
 
-  .openGradient {
+  .titleGradient {
     font-weight:bolder;
     opacity:.8;
     cursor:initial;
     font-size:1rem;
     justify-self:left;
-    margin-left:-.4rem;
     transition:.2s;
-    padding-right:5.5rem;
+    display:grid;
+    margin-top:-.5rem;
 
     &:hover, &.open, &.open:before, &:before, &:after {
       opacity:1;
@@ -30,7 +30,9 @@
       height:.1rem;
       opacity:.8;
       display:block;
-      position:absolute;
+      position:relative;
+      top:.7rem;
+      margin-top:1rem;
       margin-left:8.7rem;
     }
 
@@ -91,4 +93,50 @@
     }
   }
 
+  .configuration-gradient {
+    display:grid;
+    gap:0;
+    margin-top:2rem;
+    margin-top:1.7rem;
+
+    div {
+      border-radius:.2rem;
+      width:24.5rem;
+      height:1.5rem;
+      border:.2rem solid $main-black;
+      background:$dark-gradient;
+    }
+    
+    p {
+      display:grid;
+      gap:.3rem;
+      place-items:center;
+      
+      &.color1 {
+        margin-top:-1.8rem;
+        margin-left:-.26rem;
+      }
+
+      &.color2 {
+        margin-top:-3.7rem;
+        margin-left:22.4rem;
+      }
+    }
+
+    button {
+      background:$main-white;
+      border:.1rem solid $main-black;
+      height:2.1rem;
+      width:.5rem;
+      border-radius:.1rem;
+    }
+
+    span {
+      background: $main-black;
+      color:$main-white;
+      padding:.1rem .6rem .02rem .6rem;
+      border-radius:.1rem;
+    }
+
+  }
 }

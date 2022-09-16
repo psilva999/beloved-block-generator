@@ -9,11 +9,11 @@ const Generator = () => {
         <h1>Background:</h1>
 
         <p>
-          <input type='color' name='pColor' id='sColor'/>
+          <input type='color' name='background' id='inputBackground'/>
 
           <span>-</span>
 
-          <label htmlFor="pColor">#000000</label>
+          <label htmlFor="background">#000000</label>
         </p>
 
         <Gradient/>
