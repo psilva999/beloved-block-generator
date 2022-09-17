@@ -1,0 +1,51 @@
+@import 'config';
+
+.text-color {
+  margin-top:1.9rem;
+}
+
+.font-weight {
+  display:flex !important;
+  gap:.2rem !important;
+  flex-wrap:wrap;
+  margin-top:1.9rem;
+
+  h1 {
+    width:9.5rem;
+  }
+
+  select {
+    font-weight:bold;
+    font-size:1.1rem;
+    margin-top:.1rem;
+  }
+}
+
+code {
+  display:grid;
+  background:$main-black;
+  border-radius:.2rem;
+  margin-top:1.9rem;
+  gap:.5rem;
+  padding:1.2rem .6rem;
+
+  p {
+    color:$main-white;
+  }
+
+  button {
+    background:$emphasys;
+    padding:.4rem .2rem;
+    color:$main-white;
+    width:4.5rem;
+    font-size:.7rem;
+    font-weight:bolder;
+    text-transform:uppercase;
+    border-radius:0 0 0 .2rem;
+    letter-spacing:.1rem;
+    margin-top:-9.63rem;
+    margin-left:22.85rem;
+    max-height:1.7rem;
+    cursor:pointer;
+  }
+}

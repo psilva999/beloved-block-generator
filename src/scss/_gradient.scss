@@ -1,4 +1,35 @@
+@import 'config';
+
 .gradient {
+  overflow:auto;
+
+  &.close {
+    height:2rem;
+    overflow:hidden;
+  }
+
+  input[type='range'] {
+    background:$dark-gradient;
+    width:10.2rem;
+    height:.8rem;
+    border:.15rem solid $main-black;
+    margin-top:-.5rem;
+    border-radius:.2rem;
+
+    &::-webkit-slider-thumb {
+      border:.1rem solid $main-black;
+      width:.5rem;
+      height:1.2rem;
+    }
+
+    &::-moz-range-thumb {
+      border:.1rem solid $main-black;
+      border-radius:.2rem;
+      width:.5rem;
+      height:1rem;
+    }
+  }
+
   button {
     cursor:pointer;
     background:none;
@@ -41,7 +72,7 @@
     }
 
     &:after {
-      margin-top:-.6rem;
+      margin-top:-1.3rem;
       transform:rotate(90deg);
     }
 
@@ -97,7 +128,7 @@
     display:grid;
     gap:0;
     margin-top:2rem;
-    margin-top:1.7rem;
+    margin-bottom:2rem;
 
     div {
       border-radius:.2rem;
@@ -114,12 +145,12 @@
       
       &.color1 {
         margin-top:-1.8rem;
-        margin-left:-.26rem;
+        margin-left:-.4rem;
       }
 
       &.color2 {
         margin-top:-3.7rem;
-        margin-left:22.4rem;
+        margin-left:22.9rem;
       }
     }
 
@@ -134,7 +165,10 @@
     span {
       background: $main-black;
       color:$main-white;
-      padding:.1rem .6rem .02rem .6rem;
+      
+      width:2rem;
+      display:flex;
+      justify-content:center;
       border-radius:.1rem;
     }
 

@@ -5,9 +5,10 @@
   width:25rem;
   height:17rem;
   font-size:3rem;
-  font-weight:700;
+  font-weight:bolder;
   display:grid;
   margin-top:5rem;
+  border-radius:.1rem;
 
   &:after {
     content:'';
