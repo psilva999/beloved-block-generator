@@ -6,6 +6,23 @@
   height:27rem;
   overflow-y:auto;
   padding:1.5rem 2rem;
+  scrollbar-width:thin;
+  scrollbar-color:#7c6a6a;
+
+  &::-webkit-scrollbar {
+    width:.43rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background:$white-overtone;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background:$main-black;
+    background:$main-black;
+    border-radius:0 0 0 .1rem;
+    border:.375rem solid $main-black;
+  }
 
   select {
     height:1.5rem;

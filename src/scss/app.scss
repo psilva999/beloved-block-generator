@@ -44,6 +44,18 @@ body {
     display:flex;
     gap:6rem;
   }
+
+  .gradient-effect {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    animation:animateToSize 21s linear infinite;
+    background-image:$animate-gradient;
+    background-size:100% 1100%;
+    top:0;
+    left:0;
+    z-index:-2;
+  }
 }
 
 @import 'header';

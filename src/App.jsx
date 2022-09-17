@@ -17,6 +17,8 @@ function App() {
           <Generator/>
         </section>
       </main>
+
+      <div className='gradient-effect'></div>
     </>
 
   )

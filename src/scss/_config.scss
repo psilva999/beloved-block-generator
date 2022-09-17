@@ -16,3 +16,24 @@ $dark-white:linear-gradient(45deg, #2A2323 0%, rgba(42, 35, 35, .3) 100%);
 $bilhete:polygon(100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
 
 $dark-gradient:linear-gradient(90deg,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 1) 100%);
+$animate-gradient:linear-gradient(15deg, #cf5c5c, #c19b4a, #def2a0, #c6ee4a, #42eca6, #64b3d9, #208ea2, #498ada, #5b73df, #897ed3, #cf5c5c, #c19b4a);
+
+@keyframes show-github {
+  from {
+    top:-3rem;
+  }
+
+  to {
+    top:0;
+  }
+}
+
+@keyframes animateToSize {
+  from {
+    background-position:0% 0%;
+  }
+
+  to {
+    background-position:0% 100%;
+  }
+}
