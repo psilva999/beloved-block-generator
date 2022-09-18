@@ -38,6 +38,7 @@ body {
   main {
     max-width:78rem;
     gap:2.5rem;
+    animation:show-content .6s linear forwards;
   }
 
   section {
@@ -49,7 +50,7 @@ body {
     position:fixed;
     width:100vw;
     height:100vh;
-    animation:animateToSize 21s linear infinite;
+    animation:animateToSize 36s linear infinite;
     background-image:$animate-gradient;
     background-size:100% 1100%;
     top:0;
@@ -58,6 +59,7 @@ body {
   }
 }
 
+@import 'media';
 @import 'header';
 @import 'block';
 

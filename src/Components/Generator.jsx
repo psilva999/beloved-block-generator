@@ -30,20 +30,20 @@ const Generator = () => {
       <div className='large-range'> <h1>Width:</h1>
         <input type='range' name='width' id='width'/>
 
-        <span>1rem</span>
+        <span>.5rem</span>
       </div>
 
       <div className='large-range'> <h1>Height:</h1>
         <input type='range' name='height' id='height'/>
 
-        <span>1rem</span>
+        <span>.5rem</span>
       </div>
 
       <section className='normal-range'> <h1>Border:</h1>
-        <div>
+        <div className='wrap-border'>
           <p>
             <input type='range' name='border' id='border'/>
-            <span className='valueBorder'>.1rem</span>
+            <span className='valueBorder'>0rem</span>
           </p>
 
           <select>
@@ -78,13 +78,13 @@ const Generator = () => {
       <div className='large-range'> <h1>Border-radius:</h1>
         <input type='range' name='border-radius' id='border-radius'/>
 
-        <span>.1rem</span>
+        <span>0rem</span>
       </div>
 
       <div className='large-range'> <h1>Padding:</h1>
         <input type='range' name='padding' id='padding'/>
 
-        <span>.1rem</span>
+        <span>0rem</span>
       </div>
 
       <TextCode/>

@@ -1,0 +1,123 @@
+@import 'config';
+
+@media (max-width:79rem) {
+  body {
+    header {
+      margin-top:1.5rem;
+
+      a {
+        right:0rem !important;
+        margin-left:0;
+      }
+    }
+
+    main {
+      gap:3.5rem;
+      margin-bottom:5rem;
+    }
+
+    section {
+      display:grid;
+      place-items:center;
+      gap:3rem;
+
+      .beloved-block {
+        margin-top:0;
+
+        &:after {
+          height:20rem;
+          width:33rem;
+        }
+      }
+      
+      .generator {
+        overflow:hidden;
+        height:auto;
+      }
+    }
+
+  }
+}
+
+@media (max-width:37.5rem) {
+  body {
+    header {
+      width:95vw;
+      display:grid;
+
+      h1, span {
+        justify-self:left;
+      }
+
+      h1 {
+        font-size:2rem;
+      }
+
+      span {
+        font-size:1.1rem;
+      }
+    }
+
+    section {
+      width:96vw !important;
+    }
+
+    .beloved-block {
+      width:96% !important;
+
+      &:after {
+        width:96vw !important;
+      }
+    }
+  }
+
+  .generator {
+    width:97% !important;
+    padding-right:0rem !important;
+    padding-left:1.5rem !important;
+
+    .large-range {
+      input[type='range'] {
+        width:14rem !important;
+      }
+    }
+  }
+
+  .gradient {
+    .color12 {
+      gap:2rem;
+      flex-wrap:wrap;
+    }
+
+    .configuration-gradient {
+      div {
+        width:14rem !important;
+      }
+
+      .color2 {
+        margin-left:12.3rem !important;
+      }
+    }
+  }
+
+  .wrap-border {
+    width:16rem;
+    justify-self:left;
+    gap:.5rem;
+
+    .color-acessa {
+      margin-top:-.5rem !important;
+      margin-bottom:1rem;
+    }
+  }
+
+  code {
+    width:14rem !important;
+
+    button {
+      margin-left:11.9rem !important;
+      margin-top:-3rem !important;
+      transform:rotate(90deg);
+    }
+  }
+}

@@ -18,13 +18,13 @@ const TextCode = () => {
       <div className='large-range'> <h1>letter-spacing:</h1>
         <input type='range' name='letterSpacing' id='letterSpacing'/>
 
-        <span>1rem</span>
+        <span>0rem</span>
       </div>
 
       <div className='large-range'> <h1>font-size:</h1>
         <input type='range' name='fontSize' id='fontSize'/>
 
-        <span>1rem</span>
+        <span>.5rem</span>
       </div>
 
       <div className='font-weight'>

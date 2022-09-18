@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gradient = () => {
   return (
-    <div className='gradient close'>
+    <div className='gradient'>
       <h1 className='titleGradient'>Gradient</h1>
 
       <p>
@@ -25,7 +25,8 @@ const Gradient = () => {
           <button>315°</button>
         </p>
       </div>
-      <article>
+
+      <article className='color12'>
         <div>
           <h1>Color 1</h1>
           <p>
@@ -38,6 +39,7 @@ const Gradient = () => {
             <input type='range' name='opacity1' id='opacity1'/>
           </div>
         </div>
+
         <div>
           <h1>Color 2</h1>
           <p>
