@@ -224,12 +224,6 @@
 
         &.off {
           opacity:.6;
-          transition:.2s;
-
-          &:hover {
-            transition:.2s;
-            opacity:1;
-          }
         }
         
       }

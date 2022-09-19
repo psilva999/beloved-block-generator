@@ -9,7 +9,11 @@ import BorderTop from '../assets/svg/4-border-top.svg'
 import BorderLeft from '../assets/svg/5-border-left.svg'
 import BorderRight from '../assets/svg/6-border-right.svg'
 
+import { configBorder } from '../Events/configBlock'
+
 const Generator = () => {
+  window.addEventListener('load', configBorder)
+
   return (
     <article className='generator'>
       
@@ -61,14 +65,14 @@ const Generator = () => {
           </p>
 
           <div className='ajuste-bordas'>
-            <button>
+            <button className='bTop'>
               <img src={ BorderTop }/> </button>
-            <button className='off'>
+            <button className='bRight'>
               <img src={ BorderRight }/> </button>
             
-            <button>
+            <button className='bBottom'>
               <img src={ BorderBottom }/> </button>
-            <button>
+            <button className='bLeft'>
               <img src={ BorderLeft }/> </button>
           </div>
 
