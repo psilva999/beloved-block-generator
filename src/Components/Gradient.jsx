@@ -1,28 +1,33 @@
 import React from 'react'
+import { toggleLinearRadial, toggleGradientContainer, toggleAngles } from '../Events/gradient'
 
 const Gradient = () => {
-  return (
-    <div className='gradient'>
-      <h1 className='titleGradient'>Gradient</h1>
+  window.addEventListener('load', toggleLinearRadial)
+  window.addEventListener('load', toggleAngles)
 
-      <p>
-        <button>Linear</button>
-        <button>Radial</button>
+  return (
+    <div className='gradient close'>
+      <h1 className='titleGradient' onClick={ toggleGradientContainer }>Gradient</h1>
+
+      <p className='linear-radial'>
+        <button className='blr button-linear active'>Linear</button>
+
+        <button className='blr button-radial'>Radial</button>
       </p>
 
       <div className='angulos'> <h1>Ângulos</h1>
-        <p>
-          <button>0°</button>
-          <button>45°</button>
+        <p className='container-angles'>
+          <button value='0deg'>0°</button>
+          <button value='45deg' className='active'>45°</button>
       
-          <button>90°</button>
-          <button>135°</button>
+          <button value='90deg'>90°</button>
+          <button value='135deg'>135°</button>
       
-          <button>180°</button>
-          <button>225°</button>
+          <button value='180deg'>180°</button>
+          <button value='225deg'>225°</button>
       
-          <button>270°</button>
-          <button>315°</button>
+          <button value='270deg'>270°</button>
+          <button value='315deg'>315°</button>
         </p>
       </div>
 
