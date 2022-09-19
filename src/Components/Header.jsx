@@ -3,7 +3,7 @@ import Github from '../assets/svg/1-github.svg'
 
 const Header = () => {
   return (
-    <header>
+    <header id='top'>
       <h1>Beloved Block</h1>
       <span>Create your own authentic container</span>
 
