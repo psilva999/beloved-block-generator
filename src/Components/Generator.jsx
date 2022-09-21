@@ -9,10 +9,12 @@ import BorderTop from '../assets/svg/4-border-top.svg'
 import BorderLeft from '../assets/svg/5-border-left.svg'
 import BorderRight from '../assets/svg/6-border-right.svg'
 
-import { configBorder } from '../Events/configBlock'
+import { colorsHexadecimal, configBorder, toggleLargeRange } from '../Events/configButtonsAndInputs'
 
 const Generator = () => {
   window.addEventListener('load', configBorder)
+  window.addEventListener("load", toggleLargeRange)
+  window.addEventListener("load", colorsHexadecimal)
 
   return (
     <article className='generator'>
@@ -32,21 +34,21 @@ const Generator = () => {
       </div>
 
       <div className='large-range'> <h1>Width:</h1>
-        <input type='range' name='width' id='width'/>
+        <input type='range' name='width' id='width' min="1" max="25" steps="1"/>
 
-        <span>.5rem</span>
+        <span className='span-width'>25rem</span>
       </div>
 
       <div className='large-range'> <h1>Height:</h1>
-        <input type='range' name='height' id='height'/>
+        <input type='range' name='height' id='height' min="1" max="18" steps="1"/>
 
-        <span>.5rem</span>
+        <span className='span-height'>18rem</span>
       </div>
 
       <section className='normal-range'> <h1>Border:</h1>
         <div className='wrap-border'>
           <p>
-            <input type='range' name='border' id='border'/>
+            <input type='range' name='border' id='border' min=".1" max="1" steps=".1"/>
             <span className='valueBorder'>0rem</span>
           </p>
 
@@ -61,7 +63,7 @@ const Generator = () => {
           <p className='color-acessa'>
             <input type='color' name='border-background' id='inputBorder'/>
             <span>-</span>
-            <label htmlFor="border-background">#000000</label>
+            <label htmlFor="borderBackground">#000000</label>
           </p>
 
           <div className='ajuste-bordas'>
@@ -80,15 +82,15 @@ const Generator = () => {
       </section>
 
       <div className='large-range'> <h1>Border-radius:</h1>
-        <input type='range' name='border-radius' id='border-radius'/>
+        <input type='range' name='border-radius' id='border-radius' min="0" max="100" steps="1"/>
 
-        <span>0rem</span>
+        <span className='span-radius'>.1rem</span>
       </div>
 
       <div className='large-range'> <h1>Padding:</h1>
-        <input type='range' name='padding' id='padding'/>
+        <input type='range' name='padding' id='padding' min="0" max="10" steps="1"/>
 
-        <span>0rem</span>
+        <span className='span-padding'>0rem</span>
       </div>
 
       <TextCode/>

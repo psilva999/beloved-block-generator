@@ -3,16 +3,16 @@
 .beloved-block {
   background:$main-white;
   width:25rem;
-  height:17.5rem;
+  height:18rem;
   font-size:3rem;
   font-weight:bolder;
   display:grid;
-  margin-top:5rem;
+  margin-top:4.5rem;
   border-radius:.1rem;
 
   &:after {
     content:'';
-    width:33rem;
+    width:35rem;
     height:23rem;
     position:absolute;
     background:$sombra;
