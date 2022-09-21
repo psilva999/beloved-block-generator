@@ -49,7 +49,7 @@ const Generator = () => {
       <section className='normal-range'> <h1>Border:</h1>
         <div className='wrap-border'>
           <p>
-            <input type='range' name='border' id='border' min=".1" max="1" steps=".1"/>
+            <input type='range' name='border' id='border' min="0" max="10" steps="1"/>
             <span className='valueBorder'>0rem</span>
           </p>
 

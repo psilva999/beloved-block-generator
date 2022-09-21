@@ -96,8 +96,18 @@ export function toggleLargeRange() {
 
     else 
       spanLikeArray[e].style.left = `${ newSpanPosition.toFixed(2) }%`
-
   }
+
+  const borderBelovedBlock = document.querySelector('.normal-range input[type="range"]'),
+        spanBorder = document.querySelector(".normal-range .valueBorder")
+
+  borderBelovedBlock.value = 0
+  borderBelovedBlock.addEventListener('input', () => {
+    let newSpanPosition = (borderBelovedBlock.value * 85) / 10
+
+    spanBorder.textContent = `${borderBelovedBlock.value / 10}rem`
+    spanBorder.style.left = `${ newSpanPosition.toFixed(2) }%`
+  })
 }
 
 export function colorsHexadecimal() {
