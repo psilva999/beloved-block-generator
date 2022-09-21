@@ -9,12 +9,13 @@ import BorderTop from '../assets/svg/4-border-top.svg'
 import BorderLeft from '../assets/svg/5-border-left.svg'
 import BorderRight from '../assets/svg/6-border-right.svg'
 
-import { colorsHexadecimal, configBorder, toggleLargeRange } from '../Events/configButtonsAndInputs'
+import { colorsHexadecimal, configBorder, copyColor, toggleLargeRange } from '../Events/configButtonsAndInputs'
 
 const Generator = () => {
   window.addEventListener('load', configBorder)
   window.addEventListener("load", toggleLargeRange)
   window.addEventListener("load", colorsHexadecimal)
+  window.addEventListener("load", copyColor)
 
   return (
     <article className='generator'>
@@ -27,7 +28,7 @@ const Generator = () => {
 
           <span>-</span>
 
-          <label htmlFor="background">#000000</label>
+          <label htmlFor="background" id='label-background'>#000000</label>
         </p>
 
         <Gradient/>
@@ -63,7 +64,7 @@ const Generator = () => {
           <p className='color-acessa'>
             <input type='color' name='border-background' id='inputBorder'/>
             <span>-</span>
-            <label htmlFor="borderBackground">#000000</label>
+            <label htmlFor="borderBackground" id='label-border-background'>#000000</label>
           </p>
 
           <div className='ajuste-bordas'>

@@ -68,6 +68,20 @@
     color:$main-white;
     padding:.5rem;
     border-radius:.2rem;
+    cursor:pointer;
+
+    &.copied:after {
+      content:'copied';
+      background:$emphasys;
+      padding:.3rem .6rem;
+      color:$main-white;
+      font-size:1rem;
+      top:8.9rem;
+      right:.5rem;
+      position:fixed;
+      border-radius:0 0 .2rem .2rem;
+      cursor:initial;
+    }
   }
 
   input[type='color'] {

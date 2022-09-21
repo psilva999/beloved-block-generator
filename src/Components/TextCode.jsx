@@ -11,7 +11,7 @@ const TextCode = () => {
 
           <span>-</span>
 
-          <label htmlFor="textColor">#000000</label>
+          <label htmlFor="textColor" id='label-color'>#000000</label>
         </p>
       </div>
 

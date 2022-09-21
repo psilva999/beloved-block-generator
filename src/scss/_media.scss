@@ -2,6 +2,15 @@
 
 @media (max-width:79rem) {
   body {
+    width:100vw;
+
+    label {
+      &.copied:after {
+        opacity:0 !important;
+        display:none !important;
+      }
+    } 
+
     header {
       margin-top:1.5rem;
 
@@ -41,6 +50,15 @@
 
 @media (max-height:37.5rem) {
   body {
+    width:100vw;
+
+    label {
+      &.copied:after {
+        opacity:0 !important;
+        display:none !important;
+      }
+    }
+
     header {
       margin-top:1.5rem;
 

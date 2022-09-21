@@ -131,9 +131,58 @@ export function colorsHexadecimal() {
     })
 
     function changeLabelContent(e) {
-      console.log(labelColorLikeArray[e])
       labelColorLikeArray[e].textContent = `${inputColorLikeArray[e].value}`
     }
     
   })
+}
+
+export function copyColor() {
+  const labelColor = document.querySelectorAll('label'),
+        labelColorLikeArray = [...labelColor]
+
+  labelColor.forEach(label => {
+    label.addEventListener("click", () => {
+      if (label.id === 'label-background') {
+        toggleCopied(0)
+      }
+
+      else if (label.id === 'label-gradient1') {
+        toggleCopied(1)
+      }
+
+      else if (label.id === 'label-gradient2') {
+        toggleCopied(2)
+      }
+
+      else if (label.id === 'label-border-background') {
+        toggleCopied(3)
+      }
+
+      else if (label.id === 'label-color') {
+        toggleCopied(4)
+      }
+    })
+  })
+
+  function toggleCopied(e) {
+    navigator.clipboard.writeText(labelColorLikeArray[e].textContent)
+
+    if (!labelColorLikeArray[e].classList.contains('copied')) {
+      let tempo = 3,
+          removeCopiedMessage = setInterval(displayNoneCopied, 700)
+
+      labelColorLikeArray[e].classList.add('copied')
+      function displayNoneCopied() {
+        tempo--
+
+        if (tempo === 0) {
+          labelColorLikeArray[e].classList.remove('copied')
+          clearInterval(removeCopiedMessage)
+        }
+      }
+
+    }
+  }
+
 }
