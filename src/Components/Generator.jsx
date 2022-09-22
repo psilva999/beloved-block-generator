@@ -9,7 +9,7 @@ import BorderTop from '../assets/svg/4-border-top.svg'
 import BorderLeft from '../assets/svg/5-border-left.svg'
 import BorderRight from '../assets/svg/6-border-right.svg'
 
-import { colorsHexadecimal, configBorder, copyColor, toggleLargeRange } from '../Events/configButtonsAndInputs'
+import { border, colorsHexadecimal, configBorder, copyColor, toggleLargeRange } from '../Events/configButtonsAndInputs'
 
 const Generator = () => {
   window.addEventListener('load', configBorder)
@@ -28,7 +28,7 @@ const Generator = () => {
 
           <span>-</span>
 
-          <label htmlFor="background" id='label-background'>#000000</label>
+          <label htmlFor="background" id='label-background'>#D8D6D6</label>
         </p>
 
         <Gradient/>
@@ -46,7 +46,7 @@ const Generator = () => {
         <span className='span-height'>18rem</span>
       </div>
 
-      <section className='normal-range'> <h1>Border:</h1>
+      <section className='normal-range' onChange={ border }> <h1>Border:</h1>
         <div className='wrap-border'>
           <p>
             <input type='range' name='border' id='border' min="0" max="10" steps="1"/>
@@ -58,7 +58,6 @@ const Generator = () => {
             <option value='dashed'>dashed</option>
             <option value='dotted'>dotted</option>
             <option value='double'>double</option>
-            <option value='groove'>groove</option>
           </select>
 
           <p className='color-acessa'>

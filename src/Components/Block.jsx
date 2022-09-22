@@ -3,8 +3,7 @@ import React from 'react'
 const Block = () => {
   return (
     <div className='beloved-block'>
-      <span>SABATON</span>
-    </div>
+      <span>SABATON</span> </div>
   )
 }
 

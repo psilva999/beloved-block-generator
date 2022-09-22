@@ -19,8 +19,9 @@ function App() {
         <Header/>
 
         <section>
-          <Block/>
-          <Generator/>
+          <article className='block'><Block/></article>
+          
+          <article><Generator/></article>
         </section>
       </main>
 

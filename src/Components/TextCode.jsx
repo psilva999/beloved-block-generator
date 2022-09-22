@@ -1,4 +1,5 @@
 import React from 'react'
+import { copyCode, selectFontWeight } from '../Events/configButtonsAndInputs'
 
 const TextCode = () => {
   return (
@@ -11,7 +12,7 @@ const TextCode = () => {
 
           <span>-</span>
 
-          <label htmlFor="textColor" id='label-color'>#000000</label>
+          <label htmlFor="textColor" id='label-color'>#1F191A</label>
         </p>
       </div>
 
@@ -30,23 +31,26 @@ const TextCode = () => {
       <div className='font-weight'>
         <h1>Font-weight:</h1>
 
-        <select>
+        <select onInput={ selectFontWeight }>
           <option value='bolder'>bolder</option>
           <option value='normal'>normal</option>
-          <option value='lighter'>lighter</option>
-          <option value='bold'>bold</option>
         </select>
       </div>
 
       <code>
-        <p>border-radius:.2rem;</p>
-        <p>font-size:2rem;</p>
-        <p>text-transform:uppercase;</p>
-        <p>border:.1rem solid black;</p>
-        <p>font-weight:bolder;</p>
-        <button>copy</button>
+        <p>background:#D8D6D6;</p>
+        <p>width:25rem;</p>
+
+        <p>height:18rem;</p>
+        <p>border-radius:.1rem;</p>
+
+        <p>color:#1F191A;</p>
+        <p>font-size:3rem;</p>
+
+        <button onClick={ copyCode }>copy</button>
       </code>
     </>
+    
   )
 }
 

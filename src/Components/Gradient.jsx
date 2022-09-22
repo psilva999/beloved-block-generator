@@ -37,7 +37,7 @@ const Gradient = () => {
           <p>
             <input type='color' name='gradient1' id='inputGradient1'/>
             <span>-</span>
-            <label htmlFor="gradient1" id='label-gradient1'>#000000</label>
+            <label htmlFor="gradient1" id='label-gradient1'>#D8D6D6</label>
           </p>
           <div>
             <span>opacity</span>
@@ -50,7 +50,7 @@ const Gradient = () => {
           <p>
             <input type='color' name='gradient2' id='inputGradient2'/>
             <span>-</span>
-            <label htmlFor="gradient2" id='label-gradient2'>#000000</label>
+            <label htmlFor="gradient2" id='label-gradient2'>#D8D6D6</label>
           </p>
           <div>
             <span>opacity</span>

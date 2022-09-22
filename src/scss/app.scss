@@ -44,6 +44,19 @@ body {
   section {
     display:flex;
     gap:6rem;
+
+    article {
+      width:33rem;
+
+      &.block {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:18rem;
+        width:25rem;
+        margin-top:4.5rem;
+      }
+    }
   }
 
   .volta-pro-topo {
