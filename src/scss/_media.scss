@@ -30,6 +30,12 @@
       place-items:center;
       gap:3rem;
 
+      article {
+        &.block {
+          margin-top:0;
+        }
+      }
+
       .beloved-block {
         margin-top:0;
 
@@ -75,8 +81,14 @@
 
     section {
       display:grid;
-      place-items:center;
+      place-items:center !important;
       gap:3rem;
+
+      article {
+        &.block {
+          margin-top:0;
+        }
+      }
 
       .beloved-block {
         margin-top:0;
@@ -117,13 +129,22 @@
 
     section {
       width:96vw !important;
+
+      article {
+        width:95vw !important;
+        margin:auto;
+        
+        &.block {
+          width:95vw !important;
+        }
+      }
     }
 
     .beloved-block {
-      width:96% !important;
+      width:95% !important;
 
       &:after {
-        width:96vw !important;
+        width:94vw !important;
       }
     }
   }
