@@ -1,5 +1,6 @@
 export function toggleLargeRange() {
   const belovedBlock = document.querySelector(".beloved-block"),
+
         inputRange = document.querySelectorAll('.large-range input'), 
         inputRangeLikeArray = [...inputRange],
 
@@ -13,10 +14,20 @@ export function toggleLargeRange() {
 
   inputRange.forEach(e => {
     e.addEventListener('input', () => {
+
       if (e.id === 'width') {
+        let responsive = (Number(inputRangeLikeArray[0].value) * 18) / 25
+
         valueWidthHeight(0)
         spanMovement(0)
-        belovedBlock.style.width = `${ inputRangeLikeArray[0].value }rem`
+
+        if (window.matchMedia('(max-width:460px)').matches) {
+          belovedBlock.style.width = `${ responsive.toFixed(2) }rem`
+        }
+
+        else {
+          belovedBlock.style.width = `${ inputRangeLikeArray[0].value }rem`
+        }
       }
 
       else if (e.id === 'height') {
