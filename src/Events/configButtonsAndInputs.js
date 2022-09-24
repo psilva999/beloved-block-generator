@@ -361,9 +361,16 @@ export function selectFontWeight() {
 export function copyCode() {
   const code = document.querySelectorAll('code p'), 
         codeLikeArray = [...code],
+
         button = document.querySelector('code button')
-  
-  navigator.clipboard.writeText(codeLikeArray[0, 1, 2, 3, 4].textContent)
+
+  let codeForCopy = ''
+
+  for (let i = 0; i < codeLikeArray.length; i++) {
+    codeForCopy += `${ codeLikeArray[i].textContent }\n`
+  }
+
+  navigator.clipboard.writeText(codeForCopy)
 
   let tempo = 3,
       removeCopiedMessage = setInterval(restart, 700)

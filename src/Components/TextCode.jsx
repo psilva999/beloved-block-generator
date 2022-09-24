@@ -40,7 +40,7 @@ const TextCode = () => {
       <code>
         <p>background:#D8D6D6;</p>
         <p>width:25rem;</p>
-
+        
         <p>height:18rem;</p>
         <p>border-radius:.1rem;</p>
 
@@ -50,7 +50,6 @@ const TextCode = () => {
         <button onClick={ copyCode }>copy</button>
       </code>
     </>
-    
   )
 }
 
