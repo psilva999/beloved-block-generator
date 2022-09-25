@@ -133,3 +133,46 @@ export function toggleAngles() {
 
   })
 }
+
+export function gradientColors() {
+  const inputGradient = document.querySelectorAll('.toggle-gradient input[type="range"]'),
+        inputGradientLikeArray = [...inputGradient],
+
+        spanGradient = document.querySelectorAll('.sg'),
+        spanLikeArray = [...spanGradient]
+
+  const inputOpacity = document.querySelectorAll('.opacity-gradient'),
+        inputOpacityLikeArray = [...inputOpacity],
+
+        code = document.querySelector('code p:first-child')
+
+  inputOpacityLikeArray[0].value = 0
+  inputOpacityLikeArray[1].value = 100
+
+  inputGradientLikeArray[0].value = 0
+  inputGradientLikeArray[1].value = 100
+
+  inputOpacity.forEach(e => {
+    e.addEventListener("input", () => {
+      console.log()
+    })
+  })
+  
+  inputGradient.forEach(e => {
+    e.addEventListener('input', () => {
+      if (e.id === 'gradient1') 
+        spanMovement(0)
+
+      else if (e.id === 'gradient2')
+        spanMovement(1)
+      
+    })
+
+    function spanMovement(e) {
+      let newSpanPosition = (inputGradientLikeArray[e].value * 85) / 100
+  
+      spanLikeArray[e].style.left = `${ newSpanPosition.toFixed(2) }%`
+      spanLikeArray[e].textContent = inputGradientLikeArray[e].value
+    }
+  })
+}

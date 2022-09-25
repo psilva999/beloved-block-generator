@@ -163,18 +163,11 @@
 
   .gradient {
     .color12 {
+      position:relative;
+      left:-1.2rem;
+      width:90% !important;
       gap:2rem;
-      flex-wrap:wrap;
-    }
-
-    .configuration-gradient {
-      div {
-        width:14rem !important;
-      }
-
-      .color2 {
-        margin-left:12.3rem !important;
-      }
+      flex-wrap:wrap; 
     }
   }
 
@@ -196,6 +189,14 @@
       margin-left:90% !important;
       margin-top:-3rem !important;
       transform:rotate(90deg);
+    }
+  }
+}
+
+@media (max-width:28.2rem) {
+  body {
+    .color12 {
+      left:-.8rem !important;
     }
   }
 }

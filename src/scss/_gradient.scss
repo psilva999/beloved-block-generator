@@ -1,7 +1,34 @@
 @import 'config';
 
 .gradient {
-  overflow:auto;
+  overflow:hidden;
+  padding-bottom:1rem;
+
+  .gg-t {
+    margin-top:.5rem;
+
+    #gradient1, #gradient2 {
+      background:$main-black  !important;
+      border:none;
+    }
+
+    .span-gradient1, .span-gradient2 {
+      background:$main-black;
+      color:$main-white;
+      border-radius:.2rem;
+      font-size:.7rem;
+      margin-top:-.5rem;
+      border:.14rem solid $emphasys;
+      position:relative;
+      text-align:center;
+      width:2.1rem;
+      padding:.15rem 0;
+    }
+
+    .span-gradient2 {
+      left:85%;
+    }
+  }
 
   &.close {
     height:2rem;
@@ -124,53 +151,7 @@
     }
   }
 
-  .configuration-gradient {
-    display:grid;
-    gap:0;
-    margin-top:2rem;
-    margin-bottom:2rem;
-
-    div {
-      border-radius:.2rem;
-      width:24.5rem;
-      height:1.5rem;
-      border:.2rem solid $main-black;
-      background:$dark-gradient;
-    }
-    
-    p {
-      display:grid;
-      gap:.3rem;
-      place-items:center;
-      
-      &.color1 {
-        margin-top:-1.8rem;
-        margin-left:-.4rem;
-      }
-
-      &.color2 {
-        margin-top:-3.7rem;
-        margin-left:22.9rem;
-      }
-    }
-
-    button {
-      background:$main-white;
-      border:.1rem solid $main-black;
-      height:2.1rem;
-      width:.5rem;
-      border-radius:.1rem;
-    }
-
-    span {
-      background: $main-black;
-      color:$main-white;
-      
-      width:2rem;
-      display:flex;
-      justify-content:center;
-      border-radius:.1rem;
-    }
-
+  .color12 {
+    width:90%;
   }
 }
