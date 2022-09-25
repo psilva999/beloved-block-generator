@@ -190,13 +190,27 @@
   }
 
   code {
-    width:14rem !important;
+    width:95% !important;
 
     button {
-      margin-left:11.9rem !important;
+      margin-left:90% !important;
       margin-top:-3rem !important;
       transform:rotate(90deg);
     }
+  }
+}
+
+@media (max-width:21.6rem) {
+  body {
+    code {
+      width:14rem !important;
+  
+      button {
+        margin-left:11.5 !important;
+        margin-top:-3rem !important;
+      }
+    }
+    
   }
 }
 

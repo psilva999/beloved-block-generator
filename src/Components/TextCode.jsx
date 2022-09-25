@@ -42,10 +42,16 @@ const TextCode = () => {
         <p>width:25rem;</p>
         
         <p>height:18rem;</p>
-        <p>border-radius:.1rem;</p>
-
         <p>color:#1F191A;</p>
+
         <p>font-size:3rem;</p>
+        <p>font-weight:bolder;</p>
+
+        <p>border-radius:0.1rem;</p>
+        <p className='p-off'>padding:0rem;</p>
+
+        <p className='p-off'>letter-spacing:0rem;</p>
+        <p className='p-off'>border:none;</p>
 
         <button onClick={ copyCode }>copy</button>
       </code>

@@ -5,7 +5,10 @@ export function toggleLargeRange() {
         inputRangeLikeArray = [...inputRange],
 
         spanValue = document.querySelectorAll('.large-range span'),
-        spanLikeArray = [...spanValue]
+        spanLikeArray = [...spanValue],
+
+        code = document.querySelectorAll('code p'), 
+        codeLikeArray = [...code]
 
   inputRangeLikeArray[2].value = '1'
   inputRangeLikeArray[3].value = '0'
@@ -28,36 +31,70 @@ export function toggleLargeRange() {
         else {
           belovedBlock.style.width = `${ inputRangeLikeArray[0].value }rem`
         }
+
+        codeLikeArray[1].textContent = `width:${inputRangeLikeArray[0].value}rem;`
       }
 
       else if (e.id === 'height') {
         valueWidthHeight(1)
         spanMovement(1)
+
         belovedBlock.style.height = `${ inputRangeLikeArray[1].value }rem`
+        codeLikeArray[2].textContent = `height:${inputRangeLikeArray[1].value}rem;`
       }
 
       else if (e.id === 'border-radius') {
         value_others_span(2)
         spanMovement(2)
+
         belovedBlock.style.borderRadius = `${ inputRangeLikeArray[2].value / 10 }rem`
+
+        if (inputRangeLikeArray[2].value < .1)
+          codeLikeArray[6].classList.add("p-off")
+
+        else {
+          codeLikeArray[6].classList.remove("p-off")
+          codeLikeArray[6].textContent = `border-radius:${ inputRangeLikeArray[2].value / 10 }rem;`
+        }
       }
 
       else if (e.id === 'padding') {
         value_others_span(3)
         spanMovement(3)
+
         belovedBlock.style.padding = `${ inputRangeLikeArray[3].value / 10 }rem`
+        
+        if (inputRangeLikeArray[3].value < .1)
+          codeLikeArray[7].classList.add("p-off")
+
+        else {
+          codeLikeArray[7].classList.remove("p-off")
+          codeLikeArray[7].textContent = `padding:${ inputRangeLikeArray[3].value / 10 }rem;`
+        }
       }
 
       else if (e.id === 'letterSpacing') {
         value_others_span(4)
         spanMovement(4)
+
         belovedBlock.style.letterSpacing = `${ inputRangeLikeArray[4].value / 10 }rem`
+
+        if (inputRangeLikeArray[4].value < .1)
+          codeLikeArray[8].classList.add("p-off")
+
+        else {
+          codeLikeArray[8].classList.remove("p-off")
+
+          codeLikeArray[8].textContent = `letter-spacing:${ inputRangeLikeArray[4].value / 10 }rem;`
+        }
       }
 
       else if (e.id === 'fontSize') {
         value_others_span(5)
         spanMovement(5)
+
         belovedBlock.style.fontSize = `${ inputRangeLikeArray[5].value / 10 }rem`
+        codeLikeArray[4].textContent = `font-size:${inputRangeLikeArray[5].value / 10}rem;`
       }
     })
 
@@ -102,7 +139,10 @@ export function border() {
         color = document.querySelector('#inputBorder'),
 
         borders = document.querySelectorAll('.ajuste-bordas button'),
-        arrayBorders = [...borders]
+        arrayBorders = [...borders],
+
+        code = document.querySelectorAll('code p'), 
+        codeLikeArray = [...code]
   
   if (arrayBorders[0].classList.contains("off")) {
     belovedBlock.style.borderTop = `
@@ -158,6 +198,15 @@ export function border() {
       ${ border.value / 10 }rem
       ${ select.options[select.selectedIndex].value } 
       ${ color.value }`
+  }
+
+  if (border.value < .1)
+    codeLikeArray[9].classList.add('p-off')
+
+  else {
+    codeLikeArray[9].classList.remove('p-off')
+
+    codeLikeArray[9].textContent = `border:${ border.value / 10 }rem ${ select.options[select.selectedIndex].value } ${ color.value };`
   }
 }
 
@@ -262,7 +311,10 @@ export function colorsHexadecimal() {
         inputColorLikeArray = [...inputColor],
 
         labelColor = document.querySelectorAll('label'),
-        labelColorLikeArray = [...labelColor]
+        labelColorLikeArray = [...labelColor],
+
+        code = document.querySelectorAll('code p'), 
+        codeLikeArray = [...code]
 
   inputColorLikeArray[0].value = '#D8D6D6'
   inputColorLikeArray[1].value = '#D8D6D6'
@@ -271,9 +323,12 @@ export function colorsHexadecimal() {
 
   inputColor.forEach(input => {
     input.addEventListener('input', () => {
+
       if (input.id === 'inputBackground') {
         changeLabelContent(0)
+
         belovedBlock.style.background = inputColorLikeArray[0].value
+        codeLikeArray[0].textContent = `background:${inputColorLikeArray[0].value};`
       }
 
       else if (input.id === 'inputGradient1') {
@@ -291,7 +346,9 @@ export function colorsHexadecimal() {
 
       else if (input.id === 'inputTextColor') {
         changeLabelContent(4)
+
         spanBelovedBlock.style.color = inputColorLikeArray[4].value
+        codeLikeArray[3].textContent = `color:${inputColorLikeArray[4].value};`
       }
     })
 
@@ -353,9 +410,13 @@ export function copyColor() {
 
 export function selectFontWeight() {
   const belovedBlock = document.querySelector(".beloved-block"),
-        select = document.querySelector(".font-weight select")
+        select = document.querySelector(".font-weight select"),
+
+        code = document.querySelectorAll('code p'), 
+        codeLikeArray = [...code]
 
   belovedBlock.style.fontWeight = select.options[select.selectedIndex].value
+  codeLikeArray[5].textContent = `font-weight:${select.options[select.selectedIndex].value};`
 }
 
 export function copyCode() {
@@ -364,10 +425,19 @@ export function copyCode() {
 
         button = document.querySelector('code button')
 
-  let codeForCopy = ''
-
+  let codeForCopy = '',
+      classOff = Number(document.querySelectorAll('.p-off').length),
+      totalClassOf = classOff + 1
+      
   for (let i = 0; i < codeLikeArray.length; i++) {
-    codeForCopy += `${ codeLikeArray[i].textContent }\n`
+    if (!codeLikeArray[i].classList.contains('p-off')) {
+      if (i === codeLikeArray.length - totalClassOf) {
+        codeForCopy += `${ codeLikeArray[i].textContent }`
+      }
+
+      else codeForCopy += `${ codeLikeArray[i].textContent }\n`
+    }
+    
   }
 
   navigator.clipboard.writeText(codeForCopy)
