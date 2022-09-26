@@ -11,9 +11,9 @@ const Gradient = () => {
       <h1 className='titleGradient' onClick={ toggleGradientContainer }>Gradient</h1>
 
       <p className='linear-radial'>
-        <button className='blr button-linear active'>Linear</button>
+        <button className='blr button-linear active' value='linear'>Linear</button>
 
-        <button className='blr button-radial'>Radial</button>
+        <button className='blr button-radial' value='radial'>Radial</button>
       </p>
 
       <div className='angulos'> <h1>Ângulos</h1>
@@ -43,7 +43,7 @@ const Gradient = () => {
 
           <div className='gg-t opacity-gradient'>
             <span>opacity</span>
-            <input type='range' name='opacity1' id='opacity1'/>
+            <input type='range' name='opacity1' id='opacity1' min='0' max='10' steps='1'/>
           </div>
 
           <div className='gg-t toggle-gradient'> <span>gradient 1:</span>
@@ -62,7 +62,7 @@ const Gradient = () => {
 
           <div className='gg-t opacity-gradient'>
             <span>opacity</span>
-            <input type='range' name='opacity2' id='opacity2'/>
+            <input type='range' name='opacity2' id='opacity2' min='0' max='10' steps='1'/>
           </div>
 
           <div className='gg-t toggle-gradient'> <span>gradient 2:</span>
