@@ -1,9 +1,16 @@
 import React from 'react'
-import { toggleLinearRadial, toggleGradientContainer, toggleAngles, gradientColors } from '../Events/gradient'
+
+import { gradientColors, opacityGradient } from '../Events/gradient/toggleGradient'
+import { toggleLinearRadial } from '../Events/gradient/linear-radial'
+
+import { toggleGradientContainer } from '../Events/gradient/container'
+import { toggleAngles } from '../Events/gradient/toggleAngles'
 
 const Gradient = () => {
   window.addEventListener('load', toggleLinearRadial)
   window.addEventListener('load', toggleAngles)
+
+  window.addEventListener('load', opacityGradient)
   window.addEventListener('load', gradientColors)
 
   return (
