@@ -1,9 +1,8 @@
+import { rgba } from "../gradient/rgba"
+
 export function colorsHexadecimal() {
   const belovedBlock = document.querySelector(".beloved-block"),
         spanBelovedBlock = document.querySelector(".beloved-block span"),
-
-        inputColor = document.querySelectorAll('input[type="color"]'),
-        inputColorLikeArray = [...inputColor],
 
         labelColor = document.querySelectorAll('label'),
         labelColorLikeArray = [...labelColor],
@@ -11,13 +10,8 @@ export function colorsHexadecimal() {
         code = document.querySelectorAll('code p'), 
         codeLikeArray = [...code]
 
-  const radial = document.querySelector(".button-radial"),
-      linear = document.querySelector('.button-linear'),
-      angulo = document.querySelector(".container-angles .active")
-
-const inputOpacityLikeArray = [...document.querySelectorAll('.opacity-gradient input')],
-
-      inputGradientLikeArray = [...document.querySelectorAll('.toggle-gradient input[type="range"]')]
+  let inputColor = document.querySelectorAll('input[type="color"]'),
+      inputColorLikeArray = [...inputColor]
 
   inputColorLikeArray[0].value = '#D8D6D6'
   inputColorLikeArray[1].value = '#D8D6D6'
@@ -36,14 +30,12 @@ const inputOpacityLikeArray = [...document.querySelectorAll('.opacity-gradient i
 
       else if (input.id === 'inputGradient1') {
         changeLabelContent(1)
-        console.log(inputGradientLikeArray[0].value, inputGradientLikeArray[1].value)
         changeGradientBelovedBlock()
       }
 
       else if (input.id === 'inputGradient2') {
         changeLabelContent(2)
         changeGradientBelovedBlock()
-        console.log(inputGradientLikeArray[0].value, inputGradientLikeArray[1].value)
       }
 
       else if (input.id === 'inputBorder') {
@@ -64,17 +56,7 @@ const inputOpacityLikeArray = [...document.querySelectorAll('.opacity-gradient i
     }
 
     function changeGradientBelovedBlock() {
-      if (linear.classList.contains('active')) {
-        belovedBlock.style.background = `${linear.value}-gradient(${angulo.value}, ${inputColorLikeArray[0].value} ${inputGradientLikeArray[0].value}%, ${inputColorLikeArray[1].value} ${inputGradientLikeArray[1].value}%)`
-
-        codeLikeArray[0].textContent = `background:${linear.value}-gradient(${angulo.value}, ${inputColorLikeArray[0].value} ${inputGradientLikeArray[0].value}%, ${inputColorLikeArray[1].value} ${inputGradientLikeArray[1].value}%);`
-      }
-
-      else if (radial.classList.contains('active')) {
-        belovedBlock.style.background = `${radial.value}-gradient(circle, ${inputColorLikeArray[0].value} ${inputGradientLikeArray[0].value}%, ${inputColorLikeArray[1].value} ${inputGradientLikeArray[1].value}%)`
-
-        codeLikeArray[0].textContent = `background:${radial.value}-gradient(circle, ${inputColorLikeArray[0].value} ${inputGradientLikeArray[0].value}%, ${inputColorLikeArray[1].value} ${inputGradientLikeArray[1].value}%);`
-      }
+      rgba()
     }
     
   })
