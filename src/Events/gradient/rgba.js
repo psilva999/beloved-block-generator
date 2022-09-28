@@ -6,11 +6,11 @@ export function rgba() {
         linear = document.querySelector('.button-linear'),
         angulo = document.querySelector(".container-angles .active")
 
-  const inputColorLikeArray = [...document.querySelectorAll('.color12 input[type="color"]')],
+  let inputColorLikeArray = [...document.querySelectorAll('.color12 input[type="color"]')],
 
-        inputOpacityLikeArray = [...document.querySelectorAll('.opacity-gradient input')],
+      inputOpacityLikeArray = [...document.querySelectorAll('.opacity-gradient input')],
 
-        inputGradientLikeArray = [...document.querySelectorAll('.toggle-gradient input[type="range"]')]
+      inputGradientLikeArray = [...document.querySelectorAll('.toggle-gradient input[type="range"]')]
 
   let inputColor1 = inputColorLikeArray[0].value.replace('#', ''),
       inputColor2 = inputColorLikeArray[1].value.replace('#', '')
@@ -40,6 +40,8 @@ export function rgba() {
 
   else if (radial.classList.contains('active')) {
     belovedBlock.style.background = `${radial.value}-gradient(circle, ${rgba1} ${inputGradientLikeArray[0].value}%, ${rgba2} ${inputGradientLikeArray[1].value}%)`
+
+    console.log(inputGradientLikeArray[1].value)
 
     code.textContent = `background:${radial.value}-gradient(circle, ${rgba1} ${inputGradientLikeArray[0].value}%, ${rgba2} ${inputGradientLikeArray[1].value}%);`
   }

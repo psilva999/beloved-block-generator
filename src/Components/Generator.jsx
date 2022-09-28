@@ -9,7 +9,9 @@ import BorderTop from '../assets/svg/4-border-top.svg'
 import BorderLeft from '../assets/svg/5-border-left.svg'
 import BorderRight from '../assets/svg/6-border-right.svg'
 
-import { border, colorsHexadecimal, configBorder, copyColor, toggleLargeRange } from '../Events/configButtonsAndInputs'
+import { toggleLargeRange } from '../Events/inputs/largeRange'
+import { colorsHexadecimal, copyColor } from '../Events/inputs/colors'
+import { border, configBorder } from '../Events/buttons/border'
 
 const Generator = () => {
   window.addEventListener('load', configBorder)

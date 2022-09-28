@@ -7,7 +7,8 @@ export function toggleGradientContainer() {
         titleGradient = document.querySelector('.titleGradient'),
         inputBackground = document.querySelector("#inputBackground"),
 
-        belovedBlock = document.querySelector('.beloved-block')
+        belovedBlock = document.querySelector('.beloved-block'),
+        code = document.querySelector('code p:first-child')
 
   if (gradientContainer.classList.contains('close')) {
     rgba()

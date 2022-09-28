@@ -1,5 +1,5 @@
 import React from 'react'
-import { copyCode, selectFontWeight } from '../Events/configButtonsAndInputs'
+import { copyCode, selectFontWeight } from '../Events/buttons/weightCopy'
 
 const TextCode = () => {
   return (
