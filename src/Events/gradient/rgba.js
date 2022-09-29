@@ -41,8 +41,6 @@ export function rgba() {
   else if (radial.classList.contains('active')) {
     belovedBlock.style.background = `${radial.value}-gradient(circle, ${rgba1} ${inputGradientLikeArray[0].value}%, ${rgba2} ${inputGradientLikeArray[1].value}%)`
 
-    console.log(inputGradientLikeArray[1].value)
-
     code.textContent = `background:${radial.value}-gradient(circle, ${rgba1} ${inputGradientLikeArray[0].value}%, ${rgba2} ${inputGradientLikeArray[1].value}%);`
   }
 } 
